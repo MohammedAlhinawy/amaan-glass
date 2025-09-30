@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
 
 // Components
 import Navbar from './components/Navbar';
@@ -39,7 +39,7 @@ const MinimalLayout = () => (
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename='/amaan-glass'>
       <ScrollToTop />
       <Routes>
         {/* Routes with Navbar and Footer */}
@@ -57,7 +57,7 @@ function App() {
           <Route path="/review" element={<Review />} />
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
