@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo.PNG";
 
 const Review = () => {
   const navigate = useNavigate();
