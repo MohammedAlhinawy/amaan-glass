@@ -8,7 +8,7 @@
 
 main {
   flex-grow: 1;
-  padding-top: 76px; /* Space for fixed navbar */
+  padding-top: 70px; /* Space for fixed navbar */
 }
 
 /* Navbar Styles */
@@ -1057,9 +1057,9 @@ main {
 
 /* Responsive Styles */
 @media (min-width: 768px) {
-  main {
-    padding-top: 88px;
-  }
+  /* main {
+    padding-top: 77px;
+  } */
   
   .navbar-links {
     display: flex;

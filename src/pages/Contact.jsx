@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../components/LocationMap.css';
 import { ImWhatsapp } from 'react-icons/im';
 import { FaInstagram } from "react-icons/fa6";
@@ -11,6 +12,8 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,23 +23,72 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Create the WhatsApp message
-    const { name, email, phone, message } = formData;
-    const whatsappMessage = `New Contact Form Submission:%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
-    
-    // Open WhatsApp with the message
-    window.open(`https://wa.me/255699343939?text=${whatsappMessage}`, '_blank');
-    
-    // Optional: Reset the form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      // First, open WhatsApp with the message
+      const whatsappMessage = `
+Hello Amaan Glass, I would like to inquire about your services.
+
+**Name:** 
+${formData.name}
+
+**Email:** 
+${formData.email}
+
+**Phone:** 
+${formData.phone}
+
+**Message:** 
+${formData.message}
+      `;
+      
+      const whatsappUrl = `https://wa.me/255699343939?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, '_blank');
+      
+      // Then submit the form data to FormSubmit in the background
+      const response = await fetch('https://formsubmit.co/ajax/brainiac.t.s.m@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          _captcha: 'false',
+          _template: 'table',
+          _next: '/thankyou'
+        })
+      });
+
+      const result = await response.json();
+      
+      if (response.ok) {
+        // Reset the form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+        
+        // Navigate to thank you page
+        navigate('/thankyou');
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Even if there's an error, still navigate to thank you page
+      navigate('/thankyou');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -119,13 +171,9 @@ const Contact = () => {
             <div className="contact-form-container">
               <h2 className="contact-form-title">Send Us a Message</h2>
               <form 
-                action="https://formsubmit.co/brainiac.t.s.m@gmail.com" 
-                method="POST" 
                 onSubmit={handleSubmit}
                 className="contact-form"
               >
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="thankyou" />
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">
                     Name <span className="required-mark">*</span>
@@ -192,13 +240,9 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="form-submit-btn"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const whatsappUrl = `https://wa.me/255699343939?text=Hello%20Amaan%20Glass%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.%0AName:%20${formData.name}%0AEmail:%20${formData.email}%0APhone%20Number:%20${formData.phone}%0AMessage:%20${formData.message}`;
-                    window.open(whatsappUrl);
-                  }}
+                  disabled={isSubmitting}
                 >
-                  <span>Send Message</span>
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                 </button>
               </form>
             </div>
