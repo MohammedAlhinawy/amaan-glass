@@ -34,8 +34,8 @@ const testimonials = [
     date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000), // 1 week ago
     rating: 5,
     content: {
-      en: "The service at Amaan Glass is exceptional. They replaced my car's windshield quickly and at a great price. Highly recommended!",
-      sw: "Huduma ya Amaan Glass ni bora kabisa. Walibadili kioo cha gari langu haraka na kwa bei nzuri. Nimeipenda sana!"
+      en: "The service at Auto Glass is exceptional. They replaced my car's windshield quickly and at a great price. Highly recommended!",
+      sw: "Huduma ya Auto Glass ni bora kabisa. Walibadili kioo cha gari langu haraka na kwa bei nzuri. Nimeipenda sana!"
     }
   },
   {
@@ -70,8 +70,8 @@ const testimonials = [
     date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000), // 1 month ago
     rating: 5,
     content: {
-      en: "Very professional service. They fixed my car's windshield and it looks brand new. Thank you Amaan Glass!",
-      sw: "Huduma bora sana. Walinirekebishia kioo cha gari langu na sasa kimeonekana kipya kabisa. Asanteni Amaan Glass!"
+      en: "Very professional service. They fixed my car's windshield and it looks brand new. Thank you Auto Glass!",
+      sw: "Huduma bora sana. Walinirekebishia kioo cha gari langu na sasa kimeonekana kipya kabisa. Asanteni Auto Glass!"
     }
   }
 ];
@@ -113,7 +113,7 @@ const Home = () => {
             <div className="hero-image">
               <img 
                 src={homeImg}
-                alt="Amaan Glass workshop"
+                alt="Auto Glass workshop"
                 style={{
                   height: '350px', // Default for mobile
                   objectFit: 'cover',
@@ -169,7 +169,7 @@ const Home = () => {
       {/* Why Choose Us */}
       <section className="section bg-light">
         <div className="container">
-          <h2 className="section-title text-center">Why Choose Amaan Glass</h2>
+          <h2 className="section-title text-center">Why Choose Auto Glass</h2>
           <div className="features-grid">
             <div className="feature">
               <div className="feature-icon">

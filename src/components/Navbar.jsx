@@ -52,8 +52,8 @@ const Navbar = () => {
       <div className="container navbar-container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <img src={logo} alt="Amaan Glass Logo" />
-          <span>Amaan Glass</span>
+          <img src={logo} alt="Auto Glass Logo" />
+          <span>Auto Glass</span>
         </Link>
         
         {/* Desktop Menu */}

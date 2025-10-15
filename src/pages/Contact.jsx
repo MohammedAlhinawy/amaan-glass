@@ -30,7 +30,7 @@ const Contact = () => {
     try {
       // First, open WhatsApp with the message
       const whatsappMessage = `
-Hello Amaan Glass, I would like to inquire about your services.
+Hello Auto Glass, I would like to inquire about your services.
 
 **Name:** 
 ${formData.name}
@@ -137,7 +137,7 @@ ${formData.message}
                     <h3 className="contact-item-title">WhatsApp</h3>
                     <p className="contact-item-text">+255-699-343939</p>
                     <a 
-                      href="https://wa.me/255699343939?text=Hello%20Amaan%20Glass%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+                      href="https://wa.me/255699343939?text=Hello%Auto%20Glass%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="contact-link"
@@ -153,9 +153,9 @@ ${formData.message}
                   </div>
                   <div className="contact-content">
                     <h3 className="contact-item-title">Instagram</h3>
-                    <p className="contact-item-text">amaan_car_glass</p>
+                    <p className="contact-item-text">autoglass_co</p>
                     <a 
-                        href="https://www.instagram.com/amaan_car_glass?igsh=MWN2dHY4YXBncDk1" 
+                        href="https://www.instagram.com/autoglass_co?igsh=MXU4NWd5ejk0NTJkdw==" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="contact-link"

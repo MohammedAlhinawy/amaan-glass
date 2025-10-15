@@ -108,7 +108,7 @@ const Review = () => {
   return (
     <div className="review-page">
       <div style={{ width: '100%', marginBottom: '2rem' }} className="review-form contact-form-container">
-        <img src={logo} alt="Amaan Glass Logo" className='review-logo'/>
+        <img src={logo} alt="Auto Glass Logo" className='review-logo'/>
         <h1 style={{ marginBottom: '1rem', fontSize: '2rem', fontWeight: '600' , fontFamily: 'Times New Roman, Times, serif'}}>Leave a Review</h1>
         <p style={{
           color: '#666',

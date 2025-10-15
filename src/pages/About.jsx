@@ -7,7 +7,7 @@ const About = () => {
       {/* About Hero Section */}
       <section className="about-hero">
         <div className="container text-center">
-          <h1 className="about-hero-title">About Amaan Glass</h1>
+          <h1 className="about-hero-title">About Auto Glass</h1>
           <p className="about-hero-text">
             Your trusted partner for all car mirror and windshield needs in Kariakoo, Dar-es-Salaam.
           </p>
@@ -21,7 +21,7 @@ const About = () => {
             <div className="about-content">
               <h2 className="section-title">Our Story</h2>
               <p className="about-text">
-                Amaan Glass was established with a mission to provide high-quality car glass products and repair services to vehicle owners in Dar-es-Salaam. Over the years, we have built a reputation for excellence and reliability in the automotive glass industry.
+                Auto Glass was established with a mission to provide high-quality car glass products and repair services to vehicle owners in Dar-es-Salaam. Over the years, we have built a reputation for excellence and reliability in the automotive glass industry.
               </p>
               <p className="about-text">
                 Located in the heart of Kariakoo, we have become a trusted name for car owners looking for quality windshields and mirror repair services. Our commitment to quality and customer satisfaction has made us a preferred choice for many car owners in the region.
@@ -33,7 +33,7 @@ const About = () => {
             <div className="about-image-container">
               <img 
                 src={workshopImg}
-                alt="Amaan Glass workshop"
+                alt="Auto Glass workshop"
                 className="about-image"
               />
             </div>

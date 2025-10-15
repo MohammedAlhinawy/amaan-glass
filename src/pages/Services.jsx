@@ -60,7 +60,7 @@ const Services = () => {
               <div className="service-content content-first">
                 <h2 className="service-title">Windshield Sales</h2>
                 <p className="service-description">
-                  At Amaan Glass, we offer a comprehensive range of front and rear windshields for all car types and sizes. Our inventory includes windshields for popular makes and models, ensuring that you find the perfect fit for your vehicle.
+                  At Auto Glass, we offer a comprehensive range of front and rear windshields for all car types and sizes. Our inventory includes windshields for popular makes and models, ensuring that you find the perfect fit for your vehicle.
                 </p>
                 <p className="service-description">
                   All our glass products meet the highest industry standards for safety and quality, giving you peace of mind when you're on the road.

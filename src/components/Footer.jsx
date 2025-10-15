@@ -9,12 +9,12 @@ const Footer = () => {
         <div className="footer-grid">
           {/* Company Info */}
           <div>
-            <h3 className="footer-title">Amaan Glass</h3>
+            <h3 className="footer-title">Auto Glass</h3>
             <p>Your Trusted Car Mirror Specialist in Kariakoo</p>
             <p>Kariakoo, Dar-es-Salaam</p>
             <div className="footer-social">
               <a 
-                href="https://www.instagram.com/amaan_car_glass?igsh=MWN2dHY4YXBncDk1"
+                href="https://www.instagram.com/autoglass_co?igsh=MXU4NWd5ejk0NTJkdw=="
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -70,7 +70,7 @@ const Footer = () => {
         
         {/* Copyright */}
         <div className="footer-copyright">
-          <p>&copy; {currentYear} Amaan Glass. All rights reserved.</p>
+          <p>&copy; {currentYear} Auto Glass. All rights reserved.</p>
         </div>
       </div>
     </footer>
